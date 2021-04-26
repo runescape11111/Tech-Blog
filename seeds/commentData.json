@@ -1,0 +1,27 @@
+[
+    {
+        "reply": "I agree",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "reply": "I am vegan",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "reply": "I drink tea",
+        "user_id": 3,
+        "post_id": 3
+    },
+    {
+        "reply": "OMG me too!",
+        "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "reply": "Couldn't agree more bro",
+        "user_id": 3,
+        "post_id": 4
+    }
+]

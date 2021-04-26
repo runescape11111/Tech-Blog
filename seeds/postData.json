@@ -1,0 +1,22 @@
+[
+    {
+        "title": "I like meat",
+        "text": "Especially Steaks",
+        "user_id": 1
+    },
+    {
+        "title": "I like veggies",
+        "text": "Not really",
+        "user_id": 1
+    },
+    {
+        "title": "Coke sucks",
+        "text": "All variants",
+        "user_id": 2
+    },
+    {
+        "title": "Mountain Dew for the win",
+        "text": "Change my mind",
+        "user_id": 3
+    }
+]
