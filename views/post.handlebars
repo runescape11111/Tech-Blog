@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    {{> original_post oneSerialized homepage=false}}
+    {{#each oneSerialized.comments as |comment|}}
+    {{> comments}}
+    {{/each}}
+</div>
