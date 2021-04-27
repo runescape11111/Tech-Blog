@@ -11,7 +11,7 @@ router.get("/", async (req,res) => {
             }]
         });
         const postSerialized = allPost.map(post => post.get({plain:true}));
-        res.render("home",{postSerialized,logged_in:true});
+        res.render("home",{postSerialized,logged_in:req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -36,7 +36,7 @@ router.get("/post/:id", async (req,res) => {
             comment.user_name = user.name;
         });
         console.log(oneSerialized);
-        res.render("post",{oneSerialized,logged_in:true});
+        res.render("post",{oneSerialized,logged_in:req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -44,7 +44,7 @@ router.get("/post/:id", async (req,res) => {
 
 router.get("/login", (req,res) => {
     // if (req.session.logged_in) {
-    //     res.redirect('/profile');
+    //     res.redirect('/dashboard');
     //     return;
     // }
     res.render("login");
