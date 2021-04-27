@@ -19,20 +19,21 @@
                         <label for="post-text">Text</label>
                         <textarea class="form-control" id="post-text"></textarea>
                         <button type="submit" class="btn btn-dark mt-3">Post</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
-{{#if user.posts.length}}
-{{#each user.posts as |post|}}
-{{> original_post button=true}}
-{{/each}}
-{{else}}
-<div class="row">
-    <div class="col-12">
-        <h4>You haven't posted anything yet!</h4>
+    {{#if user.posts.length}}
+    {{#each user.posts as |post|}}
+    {{> original_post button=true dashboard=true}}
+    {{/each}}
+    {{else}}
+    <div class="row">
+        <div class="col-12">
+            <h4>You haven't posted anything yet!</h4>
+        </div>
     </div>
+    {{/if}}
 </div>
-{{/if}}
 <script src="/js/post.js"></script>

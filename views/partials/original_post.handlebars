@@ -6,7 +6,10 @@
                     <span>{{title}}</span>
                 </h3>
                 <h6 class="text-light">
+                    {{#if dashboard}}
+                    {{else}}
                     <span>Posted by: {{user.name}},</span>
+                    {{/if}}
                     <span>{{format_date date_created}}</span>
                 </h6>
             </div>
