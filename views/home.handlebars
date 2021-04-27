@@ -1,5 +1,10 @@
 <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Posts</h2>
+        </div>
+    </div>
     {{#each postSerialized as |post|}}
-    {{> original_post homepage=true}}
+    {{> original_post button=true}}
     {{/each}}
 </div>
