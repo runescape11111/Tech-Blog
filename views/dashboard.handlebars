@@ -1,30 +1,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h2>Welcome, {{user.name}}!</h2>
+            <h2>Welcome to your dashboard, {{user.name}}!</h2>
         </div>
     </div>
 
+    {{> post_form}}
+
+    {{#if user.posts.length}}
     <div class="row">
         <div class="col-12">
-            <div class="card border-dark p-3 my-2">
-                <h2>New Post</h2>
-
-                <form class="form" id="post-form">
-                    <div class="form-group">
-                        <label for="post-title">Post Title</label>
-                        <input type="text" class="form-control" id="post-title">
-                    </div>
-                    <div class="form-group">
-                        <label for="post-text">Text</label>
-                        <textarea class="form-control" id="post-text"></textarea>
-                        <button type="submit" class="btn btn-dark mt-3">Post</button>
-                    </div>
-                </form>
-            </div>
+            <h4>Your Posts</h4>
         </div>
     </div>
-    {{#if user.posts.length}}
     {{#each user.posts as |post|}}
     {{> original_post button=true dashboard=true}}
     {{/each}}

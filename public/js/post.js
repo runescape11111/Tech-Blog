@@ -2,8 +2,7 @@ const newPost = async event => {
     event.preventDefault();
     const title = document.getElementById("post-title").value.trim();
     const text = document.getElementById("post-text").value.trim();
-    console.log(title);
-    console.log(text);
+
     if (title && text) {
         const response = await fetch("/api/post", {
             method: "POST",

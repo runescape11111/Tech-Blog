@@ -1,4 +1,7 @@
 <div class="container-fluid">
+    {{#if logged_in}}
+    {{> post_form}}
+    {{/if}}
     <div class="row">
         <div class="col-12">
             <h2>Posts</h2>
@@ -8,3 +11,6 @@
     {{> original_post button=true dashboard=false}}
     {{/each}}
 </div>
+{{#if logged_in}}
+<script src="/js/post.js"></script>
+{{/if}}

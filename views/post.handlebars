@@ -3,4 +3,10 @@
     {{#each oneSerialized.comments as |comment|}}
     {{> comments}}
     {{/each}}
+    {{#if logged_in}}
+    {{> comment_form}}
+    {{/if}}
 </div>
+{{#if logged_in}}
+<script src="/js/comment.js"></script>
+{{/if}}
