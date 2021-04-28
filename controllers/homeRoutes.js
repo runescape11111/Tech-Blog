@@ -31,11 +31,11 @@ router.get("/post/:id", async (req,res) => {
             ]
         });
         const oneSerialized = onePost.get({plain:true});
-        oneSerialized.comments.forEach(async comment => {
+        await oneSerialized.comments.forEach(async comment => {
             const user = await User.findByPk(comment.user_id);
             comment.user_name = user.name;
         });
-        await res.render("post",{oneSerialized,logged_in:req.session.logged_in});
+        res.render("post",{oneSerialized,logged_in:req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
